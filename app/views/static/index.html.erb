@@ -1,0 +1,57 @@
+<% content_for :header_tags do %>
+    <%= stylesheet_link_tag 'static_page', plugin: 'warehouse' %>
+<% end %>
+
+<% content_for :sidebar do %>
+  <h3> Heading 3 </h3>
+  <ul>
+    <li><%= link_to 'this is a text link' , '#' %></li>
+    <li><%= link_to 'this is a text link' , '#' %></li>
+    <li><%= link_to 'this is a text link' , '#' %></li>
+  </ul>
+<% end %>
+
+
+<div class='todo-header'>
+  <h2>Задачи</h2>
+  <%= link_to 'Новая задача', '#', :class => 'icon icon-add' %>
+</div>
+
+<div id='todo-list'>
+  <div class='todo-item'>
+    <input type='checkbox'/>
+    <div class='col-left'>
+      <label>Перезвонить по важному вопросу</label>
+      <span>Сегодня, 14:00</span>
+      <ul><li>Метка1</li><li class='gray'>Метка2</li>
+    </div>
+    <div class='col-center'>
+    тип задачи
+    </div>
+    <div class='col-right'>
+      <div class='avatar'></div>
+      <div class='user-info'>
+      	Иванов Иван Иванович
+        ООО Ромашка
+      </div>
+    </div>
+  </div>
+  <div class='todo-item'>
+    <input type='checkbox'/>
+    <div class='col-left'>
+      <label>Перезвонить по важному вопросу</label>
+      <span>Сегодня, 14:00</span>
+      <ul><li>Метка1</li><li class='gray'>Метка2</li>
+    </div>
+    <div class='col-center'>
+    тип задачи
+    </div>
+    <div class='col-right'>
+      <div class='avatar'></div>
+      <div class='user-info'>
+      	Иванов Иван Иванович
+        ООО Ромашка
+      </div>
+    </div>
+  </div> 
+</div>
