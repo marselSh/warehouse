@@ -1,0 +1,7 @@
+<fieldset><legend><%= t('product_filter') %></legend>
+  <%= form_for '', url: project_products_path, method: :get do |f| %>
+    <%= f.label :name, t(:table_name) + ':' %>
+    <%= f.text_field :name, size: 30 %>
+    <%= f.submit t(:filter_apply), class: "small", name: nil %>
+  <% end %>
+</fieldset>

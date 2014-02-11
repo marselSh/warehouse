@@ -1,0 +1,7 @@
+<%= error_messages_for 'product' %>
+
+<p><%= f.text_field :name, required:  true, size: 25, label: t(:table_name) %></p>
+<p><%= f.text_field :price, required: true, label: t(:table_price) %></p>
+<p><%= f.text_field :quantity, required: true, label: t(:table_quantity) %></p>
+<p><%= f.text_field :produced_at, label: t(:table_produced_at) %></p>
+<p><%= f.text_field :issue_id, required: true, label: t(:table_issue_id) %></p>

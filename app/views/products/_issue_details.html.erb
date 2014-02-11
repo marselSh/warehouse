@@ -1,0 +1,8 @@
+<% if User.current.allowed_to?({controller: 'products', action: 'show'}, nil, {:global => true}) %>
+  <% Product.where(issue_id: @issue).each do |product| %>
+    <tr>
+      <th><%= t(:label_product_id) %></th>
+      <td><%= link_to product.id, project_product_path(@project, product) %>
+    </tr>
+  <% end %>
+<% end %>

@@ -1,0 +1,6 @@
+product_OO1:
+  id: 1
+  name: 'Absolut Vodka'
+  price: 10
+  quantity: 1
+  issue_id: 1

@@ -1,0 +1,29 @@
+<% content_for :header_tags do %>
+    <%= stylesheet_link_tag 'product_view', plugin: 'warehouse' %>
+<% end %>
+
+<h2> <%= t :view_product_header %></h2>
+
+<table class="product">
+  <tbody>
+    <tr>
+      <th><%= t :table_no %></th>
+      <td><%= @product.id %></td>
+    </tr>
+      <th><%= t :table_name %></th>
+      <td><%= @product.name %></td>
+    <tr>
+      	
+    </tr>
+      <th><%= t :table_table_price %></th>
+      <td><%= @product.price %></td>
+    <tr>
+      <th><%= t :table_quantity %></th>
+      <td><%= @product.quantity %></td>
+    </tr>
+    <tr>
+      <th><%= t :table_produced_at %></th>
+      <td><%= @product.produced_at %></td>
+    </tr>
+  </tbody>
+</table>

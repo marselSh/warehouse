@@ -1,0 +1,34 @@
+<div class="contextual">
+  <%= link_to_if_authorized t(:new_product), {controller: 'products', action: 'new', project_id: @project}, class: 'icon icon-add' %>
+</div>
+
+<h2><%= t(:index_header) %></h2>
+
+<%= render 'filter_form' %>
+
+<table class="list products">
+  <thead><tr>
+  <%= sort_header_tag 'id', caption: t(:table_no) %>
+  <%= sort_header_tag 'name', caption: t(:table_name) %>
+  <%= sort_header_tag 'price', caption: t(:table_price) %>
+  <%= sort_header_tag 'quantity', caption: t(:table_quantity) %>
+  <%= sort_header_tag 'produced_at', caption: t(:table_produced_at) %>
+  <%= sort_header_tag 'issue_id', caption: t(:table_issue_id) %>
+  </tr></thead>
+  <tbody>
+<% @products.each do |product| %>
+  <tr>
+    <td><%= link_to product.id, project_product_path(@project, product) %></td>
+    <td><%= product.name %></td>
+    <td><%= product.price %></td>
+    <td><%= product.quantity %></td>
+    <td><%= product.produced_at %></td>
+    <td><%= link_to product.issue_id, issue_path(product.issue_id) %></td>
+    <td class="buttons">
+      <%= link_to_if_authorized t(:button_edit), {controller: 'products', action: 'edit', project_id: @project, id: product}, class: 'icon icon-edit' %>
+      <%= link_to_if_authorized t(:button_delete), {controller: 'products', action: 'destroy', project_id: @project, id: product}, confirm: 'Are you sure?', method: :delete, class: 'icon icon-del' %>
+    </td>
+  </tr>
+<% end %>
+    </tbody>
+</table>

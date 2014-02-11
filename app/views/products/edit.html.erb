@@ -1,0 +1,9 @@
+<h2><%= t(:edit_product) %></h2>
+
+<%= labelled_form_for @product, url: project_product_path do |f| %>
+  <fieldset class="box tabular">
+    <legend><%=t(:product_info)%></legend>
+      <%= render 'form', f: f %>
+      <p><%= submit_tag :new, value: t(:edit_product) %></p>
+  </fieldset>
+<% end %>
