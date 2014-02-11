@@ -7,8 +7,8 @@ Redmine::Plugin.register :warehouse do
   author_url 'http://example.com/about'
 
   project_module :warehouse do
-  	permission :view_products, products: [:index]
-  	permission :view_product, products: [:show]
+    permission :view_products, products: [:index]
+    permission :view_product, products: [:show]
     permission :create_products, products: [:new, :create]
     permission :edit_products, products: [:edit, :update]
     permission :delete_products, products: :destroy

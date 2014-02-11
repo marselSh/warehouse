@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
   def index
     sort_init 'id'
     sort_update %w(id name price quantity produced_at issue_id)
-  	@products = Product.filter_and_sort sort_clause, params[:name]
+    @products = Product.filter_and_sort sort_clause, params[:name]
   end
 
   def show
